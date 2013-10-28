@@ -1,0 +1,15 @@
+imdbid: "tt0103064"
+imdburl: "http://www.imdb.com/title/tt0103064/"
+genres: "Action,Sci-Fi,Thriller"
+languages: "English,Spanish"
+country: "USA,France"
+votes: "477442"
+stv: 0
+series: 0
+rating: "8.5"
+runtime: "137min,152min,154min"
+title: "Terminator 2: Judgment Day"
+year: "1991"
+usascreens: 2274
+ukscreens: 0
+cacheExpiry: 1381495634

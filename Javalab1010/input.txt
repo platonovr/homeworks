@@ -1,0 +1,70 @@
+imdbid: "tt0120689"
+imdburl: "http://www.imdb.com/title/tt0120689/"
+genres: "Crime,Drama,Fantasy,Mystery"
+languages: "English,French"
+country: "USA"
+votes: "447539"
+stv: 0
+series: 0
+rating: "8.5"
+runtime: "189min"
+title: "The Green Mile"
+year: "1999"
+usascreens: 2875
+ukscreens: 340
+cacheExpiry: 1381861345
+
+
+{
+imdbid: "tt0088247"
+imdburl: "http://www.imdb.com/title/tt0088247/"
+genres: "Action,Sci-Fi"
+languages: "English,Spanish"
+country: "UK,USA"
+votes: "378449"
+stv: 0
+series: 0
+rating: "8.1"
+runtime: "107min"
+title: "The Terminator"
+year: "1984"
+usascreens: 1112
+ukscreens: 0
+cacheExpiry: 1381999747
+}
+
+{
+imdbid: "tt0103064"
+imdburl: "http://www.imdb.com/title/tt0103064/"
+genres: "Action,Sci-Fi,Thriller"
+languages: "English,Spanish"
+country: "USA,France"
+votes: "477442"
+stv: 0
+series: 0
+rating: "8.5"
+runtime: "137min,152min,154min"
+title: "Terminator 2: Judgment Day"
+year: "1991"
+usascreens: 2274
+ukscreens: 0
+cacheExpiry: 1381495634
+}
+
+{
+imdbid: "tt0181852"
+imdburl: "http://www.imdb.com/title/tt0181852/"
+genres: "Action,Sci-Fi,Thriller"
+languages: "English"
+country: "USA,Germany,UK"
+votes: "214343"
+stv: 0
+series: 0
+rating: "6.4"
+runtime: "109min"
+title: "Terminator 3: Rise of the Machines"
+year: "2003"
+usascreens: 3504
+ukscreens: 478
+cacheExpiry: 1382012752
+}

@@ -1,0 +1,9 @@
+imdbid: "tt0088247"
+imdburl: "http://www.imdb.com/title/tt0088247/"
+genres: "Action,Sci-Fi"
+languages: "English,Spanish"
+country: "UK,USA"
+rating: "8.1"
+title: "The Terminator"
+year: "1984"
+cacheExpiry: 1381999747

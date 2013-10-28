@@ -1,0 +1,8 @@
+imdbid: "tt0117731"
+imdburl: "http:\/\/www.imdb.com\/title\/tt0117731\/"
+genres: "Action,Adventure,Sci-Fi,Thriller"
+languages: "English"
+country: "USA"
+rating: "7.5"
+title: "Star Trek: First Contact"
+year: "1996"

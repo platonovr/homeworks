@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<project name="TableView" default="compile">
+	<property name="src.dir" value="./src" />
+	<property name="test.dir" value="./test" />
+	<property name="test.out.dir" value="./testout" />
+	<property name="lib.dir" value="./lib" />
+	<property name="output.dir" value="./bin" />
+	<property name="result.name" value="tableview" />
+
+	<target name="clean" description="Clean output dir">
+		<echo>Clean</echo>
+		<delete dir="${output.dir}" />
+		<delete>
+			<fileset dir="." includes="*.jar" />
+		</delete>
+		<antcall target="clean.tests" />
+	</target>
+
+	<target name="make.dir" description="making output dir">
+		<mkdir dir="${output.dir}" />
+	</target>
+
+	<target name="compile" description="Complile project">
+		<antcall target="make.dir" />
+		<javac destdir="${output.dir}">
+			<classpath>
+				<pathelement location="${src.dir}" />
+			</classpath>
+			<src path="${src.dir}" />
+		</javac>
+		<antcall target="create-jar" />
+	</target>
+
+	<target name="create-jar" description="Create jar">
+		<jar destfile="${result.name}.jar">
+			<fileset dir="${output.dir}">
+				<include name="**/*.class" />
+			</fileset>
+			<manifest>
+				<attribute name="Main-Class" value="com.fujitsu.fs.java.tableview.TableView" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="run" depends="input-runargs" description="run project">
+		<antcall target="compile" />
+		<java jar="${result.name}.jar" fork="true">
+			<arg line="${args}" />
+		</java>
+	</target>
+
+	<target name="input-runargs" unless="args" description="prompts for command line arguments if necessary">
+		<input addProperty="args" message="Type path to file:" />
+	</target>
+
+	<target name="make.test.dir" description="making test out dir">
+		<mkdir dir="${test.out.dir}" />
+	</target>
+
+	<target name="compile.tests" description="Compile tests">
+		<antcall target="make.test.dir" />
+		<antcall target="compile" />
+		<echo>Compiling tests...</echo>
+		<javac destdir="${test.output.dir}">
+			<classpath>
+				<pathelement location="${output.dir}" />
+				<pathelement location="${lib.dir}/junit-4.11.jar" />
+				<pathelement location="${lib.dir}/hamcrest-core-1.3.jar" />
+			</classpath>
+			<src path="${test.dir}" />
+		</javac>
+		<copy todir="${test.output.dir}">
+			<fileset dir="${test.dir}">
+				<include name="**/*.csv" />
+				<include name="**/*.tsv" />
+			</fileset>
+		</copy>
+	</target>
+
+
+
+	<target name="test" depends="compile.tests" description="testing">
+		<junit>
+			<classpath>
+				<pathelement location="${output.dir}" />
+				<pathelement location="${test.output.dir}" />
+				<pathelement location="${lib.dir}/junit-4.11.jar" />
+				<pathelement location="${lib.dir}/hamcrest-core-1.3.jar" />
+			</classpath>
+			<batchtest>
+				<fileset dir="${test.output.dir}">
+					<include name="**/AbstractTableParserTest.class" />
+					<include name="**/CSVTableParserTest.class" />
+				</fileset>
+			</batchtest>
+			<formatter type="brief" usefile="false" />
+		</junit>
+		<fail if="tests.failed">
+		            tests.failed=${tests.failed}
+		            ***********************************************************
+		            ***********************************************************
+		            ****  One or more tests failed!  Check the output ...  ****
+		            ***********************************************************
+		            ***********************************************************
+		        </fail>
+
+	</target>
+
+</project>
+

@@ -1,0 +1,16 @@
+<project name="Javalab710" default="compile">
+
+	<property name="src.dir" value="src/">
+	</property>
+
+	<target name="clean">
+		<delete dir="${src.dir}">
+		</delete>
+	</target>
+
+
+	<target name="compile">
+		<javac destdir="bin/" srcdir="src/">
+		</javac>
+	</target>
+</project>

@@ -1,0 +1,19 @@
+java.io nio
+
+File
+FileReader
+FileWriter
+BufferedReader
+BufferedWriter
+PrintWriter
+
+сборка приложений - Ant
+ant utility установить
+
+ant run
+
+дз
+1)программа берет и читает текстовый файл
+сохраняем в другой
+собирается антом
+хуянтом
